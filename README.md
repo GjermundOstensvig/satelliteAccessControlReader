@@ -7,3 +7,6 @@ The four files listed below should be in the same folder so the Arduino compiler
 * ConvertToInt
 * IoTRfidEnhet
 * QueryToDatabase
+This repository is referenced in a document that i wrote for Østfold University College. 
+In that document, I showed other examples on the different concepts used in this code. 
+If someone wants these examples, please contact me and we'll see what we can do.
