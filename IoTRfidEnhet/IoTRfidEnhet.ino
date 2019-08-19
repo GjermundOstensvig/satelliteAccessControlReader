@@ -35,7 +35,6 @@ MySQL_Connection conn((Client *)&client);
 MySQL_Cursor cur = MySQL_Cursor(&conn);
 
 void setup() {
-  
   Serial.begin(9600);
   while (!Serial); // wait for serial port to connect.
 
