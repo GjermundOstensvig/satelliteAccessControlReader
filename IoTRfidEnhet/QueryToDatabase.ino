@@ -1,5 +1,5 @@
+//Connects to database, checks for personId and returns a boolean true if it exists in DB
 bool personIdInDatabase(int personId){
- 
   row_values *row = NULL;
   
   //Connect to Database

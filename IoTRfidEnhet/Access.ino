@@ -1,3 +1,4 @@
+//Plays a happy tune using a buzzer and flashes a green LED.
 void accessGranted(){
   digitalWrite(greenLed, HIGH); 
   ledcWriteTone(channel, 500);
@@ -10,6 +11,7 @@ void accessGranted(){
   digitalWrite(greenLed, LOW);
 }
 
+//Plays one deep note using a buzzer and flashes a red LED.
 void accessDenied(){
   digitalWrite(redLed, HIGH);
   ledcWriteTone(channel, 1000);

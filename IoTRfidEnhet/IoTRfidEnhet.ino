@@ -75,7 +75,7 @@ void setup() {
 }
 
 void loop() {
-  // Prepare key to FFFFFFFFFFFFh
+  // Prepare key (FFFFFFFFFFFFh)
   MFRC522::MIFARE_Key key;
   for (byte i = 0; i < 6; i++) key.keyByte[i] = 0xFF;
   
@@ -95,12 +95,9 @@ void loop() {
 
   Serial.println(F("**Card Detected:**"));
 
-  mfrc522.PICC_DumpDetailsToSerial(&(mfrc522.uid)); //dump some details about the card
-
-  Serial.print(F("Person ID: "));
+  mfrc522.PICC_DumpDetailsToSerial(&(mfrc522.uid)); //dump some details about the card to Serial
 
   byte byteBuffer[18];
-
   block = 1;
   len = 18;
 
@@ -113,6 +110,8 @@ void loop() {
     return;
   }
 
+  Serial.print(F("Person ID: "));
+  
   //Read personId from block 1
   status = mfrc522.MIFARE_Read(block, byteBuffer, &len);
   if (status != MFRC522::STATUS_OK) {
@@ -133,7 +132,7 @@ void loop() {
   else{
     accessDenied();
   }
-  delay(1000); //change value if you want to read cards faster
+  delay(1000); //Change value if you want to read cards faster
 
   mfrc522.PICC_HaltA();
   mfrc522.PCD_StopCrypto1();

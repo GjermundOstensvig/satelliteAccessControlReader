@@ -1,3 +1,4 @@
+//Takes the byte array and converts it into an integer (this method assumes it gets a number value and not any other symbol).
 int convertToInt(byte byteBuffer[18]){
   char textBuffer[16];
   //Convert from bytes to ASCII characters
