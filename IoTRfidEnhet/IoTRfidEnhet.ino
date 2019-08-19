@@ -18,7 +18,7 @@ int redLed = 15;
 int greenLed = 32;
 
 //Database
-IPAddress server_addr(10,0,0,62);  // IP of the MySQL *server* here
+IPAddress server_addr(**,**,**,**);  // IP of the MySQL *server* here
 char user[] = "RfidReader1";              // MySQL user login username
 char password[] = "fall2019";     // MySQL user login password
 
@@ -26,8 +26,8 @@ char password[] = "fall2019";     // MySQL user login password
 char query[] = "SELECT personId, firstName FROM `satelliteaccesscontrol`.person;";
 
 // WiFi
-char ssid[] = "Rhadowsnett";        // your SSID
-char pass[] = "Narnia123";       // your SSID Password
+char ssid[] = "******";        // your SSID
+char pass[] = "******";       // your SSID Password
 WiFiClient client;
 
 MySQL_Connection conn((Client *)&client);
